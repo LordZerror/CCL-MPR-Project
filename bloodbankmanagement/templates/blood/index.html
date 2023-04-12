@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+  <style>
+    .xyz {
+      margin-bottom: 0px;
+      background-image: url('https://storage.googleapis.com/bloodbank-management-system/bbm2.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #hero {
+      width: 100%;
+      height: 95vh;
+      background: url('https://storage.googleapis.com/bloodbank-management-system/bbm.jpeg') top center;
+      background-size: cover;
+      position: relative;
+    }
+
+    #hero:before {
+      content: "";
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    #hero .container {
+      padding-top: 72px;
+    }
+
+    @media (max-width: 992px) {
+      #hero .container {
+        padding-top: 62px;
+      }
+    }
+
+    #hero h1 {
+      margin: 0;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+    }
+
+    #hero h2 {
+      color: #eee;
+      margin: 10px 0 0 0;
+      font-size: 24px;
+    }
+
+    #hero .btn-get-started {
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 10px 35px;
+      border-radius: 50px;
+      transition: 0.5s;
+      margin-top: 30px;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    #hero .btn-get-started:hover {
+      background: #fff;
+      border: 2px solid #fff;
+      color: #116466;
+      cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+      #hero {
+        background-attachment: fixed;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #hero {
+        height: 100vh;
+      }
+
+      #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    .about {
+      padding-top: 50px;
+    }
+
+    .about .content h3 {
+      font-weight: 600;
+      font-size: 26px;
+    }
+
+    .about .content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about .content ul li {
+      padding-bottom: 10px;
+    }
+
+    .about .content ul i {
+      font-size: 20px;
+      padding-right: 4px;
+      color: #24305e;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  {% include "blood/navbar.html" %}
+
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative">
+      <h1>Donate <span style="color: #FF0018;">Blood</span>,<br><span style="color: #FF0018;">Save</span> Life
+      </h1>
+      <h2 style="margin-top: 10px;">Not only doctors can save lives; you can too.</h2>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src='https://storage.googleapis.com/bloodbank-management-system/bbm2.jpeg' class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>A Website to manage the data of blood donors and receivers</h3>
+            <ul style="padding-top: 10px;">
+              <li></i>Admin Interface to manage all the entries and requests</li>
+              <li></i>Patient Interface to send requests and specify all the details</li>
+              <li></i>Donor Interface to enter availability of blood, and its details</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+  </main><!-- End #main -->
+
+  {% include "blood/footer.html" %}
+
+</body>
+
+</html>
